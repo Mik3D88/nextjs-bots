@@ -24,6 +24,7 @@ const cdbSearch = async (req, res) => {
                         return { name, cidade }
                     });
                 })
+                await page.close()
                 res.status(200).json({ topAcompanhantes, selecaoNacional, success: true })
 
             } catch (error) {

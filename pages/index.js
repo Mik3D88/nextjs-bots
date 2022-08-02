@@ -5,8 +5,8 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <>
-        <div className={styles.container}>
-          <h1>Automação</h1>
+        <div>
+          <h1>API de Automação</h1>
         </div>
     </>
   )

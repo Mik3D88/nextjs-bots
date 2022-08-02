@@ -32,6 +32,7 @@ const cnpjBiz = async (req, res) => {
                         ...result
                     })
                 }
+                await page.close()
                 res.status(200).json({ detailsOfList, success: true })
 
             } catch (error) {

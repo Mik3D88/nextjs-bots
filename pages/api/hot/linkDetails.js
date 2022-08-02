@@ -21,6 +21,7 @@ const cdbSearch = async (req, res) => {
                         name, cidade, valor, numero
                     })
                 }
+                await page.close()
                 res.status(200).json({ resultado, success: true })
 
             } catch (error) {

@@ -22,6 +22,7 @@ const olx = async (req, res) => {
                     });
                     return itens
                 })
+                await page.close()
                 res.status(200).json({ result: listItems, success: true })
 
             } catch (error) {

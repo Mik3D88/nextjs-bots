@@ -29,6 +29,7 @@ const cnpjBiz = async (req, res) => {
                     await page.goto(nextPage, { waitUntil: ['networkidle2'] })
                 }
                 console.log("Finalizando a pesquisa no CNPJ_BIZ", urls.length)
+                await page.close()
                 res.status(200).json({ urls, success: true })
             } catch (error) {
                 console.log(error)
